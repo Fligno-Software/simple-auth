@@ -1,0 +1,44 @@
+{
+    "name": "fligno/simple-auth",
+    "description": "A simple approach to adding basic authentication API to Laravel applications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Carlo S. Luchavez",
+            "email": "jamescarlo.luchavez@fligno.com",
+            "homepage": "https://www.linkedin.com/in/jsluchavez"
+        }
+    ],
+    "homepage": "https://github.com/fligno/simple-auth",
+    "keywords": ["Laravel", "SimpleAuth"],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "~7|~8",
+        "fligno/starter-kit": "^1.0.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fligno\\SimpleAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fligno\\SimpleAuth\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fligno\\SimpleAuth\\SimpleAuthServiceProvider"
+            ],
+            "aliases": {
+                "SimpleAuth": "Fligno\\SimpleAuth\\Facades\\SimpleAuth"
+            }
+        }
+    }
+}
